@@ -4,13 +4,14 @@ import {Link, Route, Routes} from "react-router-dom";
 import {MainPageAsync} from "./components/pages/MainPage/MainPage.async";
 import {AboutPageAsync} from "./components/pages/AboutPage/AboutPage.async";
 import {useTheme} from "./theme/useTheme";
+import {classNames} from "./helpers/classNames";
 
 
 const App = () => {
     const {theme, toggleTheme } = useTheme();
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {hovered: true, selected: false}, [theme])}>
             <button type="button" onClick={toggleTheme}>TOGGLE THEME</button>
             <Link to={'/'}>MAIN PAGE</Link>
             <Link to={'/about'}>ABOUT PAGE</Link>
