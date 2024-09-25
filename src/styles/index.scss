@@ -1,0 +1,9 @@
+@import './reset';
+@import 'theme/dark';
+@import 'theme/light';
+@import 'variables/global';
+
+.app {
+  height: 100vh;
+  font: var(--font-m);
+}
